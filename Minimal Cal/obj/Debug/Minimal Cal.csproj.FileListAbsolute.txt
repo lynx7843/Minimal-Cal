@@ -1,0 +1,10 @@
+D:\dev\Minimal Cal\Minimal Cal\bin\Debug\Minimal Cal.exe.config
+D:\dev\Minimal Cal\Minimal Cal\bin\Debug\Minimal Cal.exe
+D:\dev\Minimal Cal\Minimal Cal\bin\Debug\Minimal Cal.pdb
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal Cal.csproj.AssemblyReference.cache
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal_Cal.Form1.resources
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal_Cal.Properties.Resources.resources
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal Cal.csproj.GenerateResource.cache
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal Cal.csproj.CoreCompileInputs.cache
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal Cal.exe
+D:\dev\Minimal Cal\Minimal Cal\obj\Debug\Minimal Cal.pdb

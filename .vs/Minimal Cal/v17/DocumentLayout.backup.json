@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\dev\\Minimal Cal\\",
+  "WorkspaceRootPath": "D:\\dev\\Minimal-Cal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F07A8702-7F47-477C-8332-8A2070622C1C}|Minimal Cal\\Minimal Cal.csproj|d:\\dev\\minimal cal\\minimal cal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F07A8702-7F47-477C-8332-8A2070622C1C}|Minimal Cal\\Minimal Cal.csproj|d:\\dev\\minimal-cal\\minimal cal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F07A8702-7F47-477C-8332-8A2070622C1C}|Minimal Cal\\Minimal Cal.csproj|solutionrelative:minimal cal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F07A8702-7F47-477C-8332-8A2070622C1C}|Minimal Cal\\Minimal Cal.csproj|D:\\dev\\Minimal-Cal\\minimal cal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F07A8702-7F47-477C-8332-8A2070622C1C}|Minimal Cal\\Minimal Cal.csproj|solutionrelative:minimal cal\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +18,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\dev\\Minimal-Cal\\Minimal Cal\\Form1.cs",
+              "RelativeDocumentMoniker": "Minimal Cal\\Form1.cs",
+              "ToolTip": "D:\\dev\\Minimal-Cal\\Minimal Cal\\Form1.cs",
+              "RelativeToolTip": "Minimal Cal\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-26T13:07:02.282Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\dev\\Minimal Cal\\Minimal Cal\\Form1.cs",
+              "DocumentMoniker": "D:\\dev\\Minimal-Cal\\Minimal Cal\\Form1.cs",
               "RelativeDocumentMoniker": "Minimal Cal\\Form1.cs",
-              "ToolTip": "D:\\dev\\Minimal Cal\\Minimal Cal\\Form1.cs [Design]",
+              "ToolTip": "D:\\dev\\Minimal-Cal\\Minimal Cal\\Form1.cs [Design]",
               "RelativeToolTip": "Minimal Cal\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-26T13:02:43.157Z",
