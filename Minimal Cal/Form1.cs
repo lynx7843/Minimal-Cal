@@ -62,7 +62,23 @@ namespace Minimal_Cal
         {
             try
             {
-                num1 = double.Parse(textBox1.Text);
+                /*num1 = double.Parse(textBox1.Text);
+                operation = "/";
+                textBox1.Clear();*/
+
+                if (num1 != 0 && operation == "/")
+                {
+                    double temp = double.Parse(textBox1.Text);
+                    num1 = num1 / temp;
+                    textBox1.Text = num1.ToString();
+                }
+                else
+                {
+                    {
+                        num1 = double.Parse(textBox1.Text);
+                    }
+                }
+
                 operation = "/";
                 textBox1.Clear();
             }
@@ -92,7 +108,21 @@ namespace Minimal_Cal
         {
             try
             {
-                num1 = double.Parse(textBox1.Text);
+                /*num1 = double.Parse(textBox1.Text);
+                operation = "*";
+                textBox1.Clear();*/
+
+                if (num1 != 0 && operation == "*")
+                {
+                    double temp = double.Parse(textBox1.Text);
+                    num1 = num1 * temp;
+                    textBox1.Text = num1.ToString();
+                }
+                else
+                {
+                    num1 = double.Parse(textBox1.Text);
+                }
+
                 operation = "*";
                 textBox1.Clear();
             }
@@ -121,7 +151,21 @@ namespace Minimal_Cal
         {
             try
             {
-                num1 = double.Parse(textBox1.Text);
+                /*num1 = double.Parse(textBox1.Text);
+                operation = "-";
+                textBox1.Clear();*/
+
+                if (num1 != 0 && operation == "-")
+                {
+                    double temp = double.Parse(textBox1.Text);
+                    num1 = num1 - temp;
+                    textBox1.Text = num1.ToString();
+                }
+                else
+                {
+                    num1 = double.Parse(textBox1.Text);
+                }
+
                 operation = "-";
                 textBox1.Clear();
             }
@@ -150,7 +194,21 @@ namespace Minimal_Cal
         {
             try
             {
-                num1 = double.Parse(textBox1.Text);
+                /*num1 = double.Parse(textBox1.Text);
+                operation = "+";
+                textBox1.Clear();*/
+
+                if (num1 != 0 && operation == "+")
+                {
+                    double temp = double.Parse(textBox1.Text);
+                    num1 = temp + num1;
+                    textBox1.Text = num1.ToString();
+                }
+                else
+                {
+                    num1 = double.Parse(textBox1.Text);
+                }
+
                 operation = "+";
                 textBox1.Clear();
             }
@@ -191,31 +249,48 @@ namespace Minimal_Cal
                 double num2 = double.Parse(textBox1.Text);
                 double result = num1 + num2;
                 textBox1.Text = result.ToString();
+
+                num1 = result;
+                operation = "";
             }
+
             else if (operation == "-")
             {
                 double num2 = double.Parse(textBox1.Text);
                 double result = num1 - num2;
                 textBox1.Text = result.ToString();
+
+                num1 = result;
+                operation = "";
             }
+
             else if (operation == "*")
             {
                 double num2 = double.Parse(textBox1.Text);
                 double result = num1 * num2;
                 textBox1 .Text = result.ToString();
+
+                num1 = result;
+                operation = "";
             }
+
             else if (operation == "/")
             {
                 double num2 = double.Parse(textBox1.Text);
                 double result = num1 / num2;
                 textBox1.Text = result.ToString();
+
+                num1 = result;
+                operation = "";
             }
+
             else if (operation == "%")
             {
                 double num2 = double.Parse(textBox1.Text);
                 double result = num1 * (num2 / 100);
                 textBox1.Text = result.ToString();
             }
+
             else if (operation == "√")
             {
                 double result = Math.Sqrt(num1);
