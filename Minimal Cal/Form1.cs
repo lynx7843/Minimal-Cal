@@ -33,17 +33,6 @@ namespace Minimal_Cal
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                num1 = double.Parse(textBox1.Text);
-                operation = "(";
-                textBox1.Clear();
-            }
-            catch { }
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             try
@@ -333,6 +322,22 @@ namespace Minimal_Cal
             {
                 double value = double.Parse(textBox1.Text);
                 textBox1.Text = (-value).ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double value = double.Parse(textBox1.Text);
+                if (value != 0)
+                {
+                    textBox1.Text = (1 / value).ToString();
+                }
             }
             catch
             {
