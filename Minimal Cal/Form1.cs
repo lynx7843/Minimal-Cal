@@ -298,6 +298,45 @@ namespace Minimal_Cal
             }
         }
 
+        private void button21_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length > 0)
+            {
+                textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
+            }
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double value = double.Parse(textBox1.Text);
+                textBox1.Text = (value * value).ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double value = double.Parse(textBox1.Text);
+                textBox1.Text = (-value).ToString();
+            }
+            catch
+            {
+
+            }
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
