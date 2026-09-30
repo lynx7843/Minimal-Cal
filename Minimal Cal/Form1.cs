@@ -25,6 +25,66 @@ namespace Minimal_Cal
 
         }
 
+        // Keys that aren't characters (Enter, Backspace, Esc, Delete) arrive here,
+        // before a focused button can react to them
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Enter:
+                    button17.PerformClick();   // =
+                    return true;
+                case Keys.Back:
+                    button22.PerformClick();   // ⌫
+                    return true;
+                case Keys.Escape:
+                    button1.PerformClick();    // C
+                    return true;
+                case Keys.Delete:
+                    button21.PerformClick();   // CE
+                    return true;
+                case Keys.Space:
+                    // Stop Space from re-clicking whichever button was last clicked
+                    return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        // Typed characters (works with both the number row and the numpad)
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Button target = null;
+            switch (e.KeyChar)
+            {
+                case '0': target = button19; break;
+                case '1': target = button16; break;
+                case '2': target = button15; break;
+                case '3': target = button14; break;
+                case '4': target = button12; break;
+                case '5': target = button11; break;
+                case '6': target = button10; break;
+                case '7': target = button8; break;
+                case '8': target = button7; break;
+                case '9': target = button6; break;
+                case '.':
+                case ',': target = button18; break;
+                case '+': target = button13; break;
+                case '-': target = button9; break;
+                case '*':
+                case 'x':
+                case 'X': target = button5; break;
+                case '/': target = button3; break;
+                case '%': target = button4; break;
+                case '=': target = button17; break;
+            }
+
+            if (target != null)
+            {
+                target.PerformClick();
+                e.Handled = true;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
