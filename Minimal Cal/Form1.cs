@@ -340,6 +340,12 @@ namespace Minimal_Cal
             }
         }
 
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            // Hand focus back to the form so no text cursor shows in the display
+            this.ActiveControl = null;
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
