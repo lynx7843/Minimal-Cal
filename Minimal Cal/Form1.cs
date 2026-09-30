@@ -239,7 +239,10 @@ namespace Minimal_Cal
 
         private void button18_Click(object sender, EventArgs e)
         {
-            textBox1.Text += ".";
+            if (!textBox1.Text.Contains("."))
+            {
+                textBox1.Text += ".";
+            }
         }
 
         private void button17_Click(object sender, EventArgs e)
