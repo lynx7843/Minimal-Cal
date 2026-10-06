@@ -1,26 +1,33 @@
 # Minimal Cal
 
-A sleek, lightweight calculator application built for Windows using C# and .NET Windows Forms. This project focuses on a clean user interface with a dark theme and circular button styling.
+A lightweight calculator for Windows built with C# and .NET Windows Forms, with a dark frosted glass interface.
 
-## 🪶 Features
-* **Minimalist Design:** A distraction-free, dark-themed user interface.
-* **Circular Controls:** Custom-styled circular buttons for a modern look.
-* **Standard Arithmetic:** Performs basic operations (Addition, Subtraction, Multiplication, Division).
-* **Responsive Input:** clear and responsive text handling.
+Windows updates have not optimized the default calculator, which is large in size, or refreshed its UI. Minimal Cal is a small, clean alternative.
 
-## 🛠️ Tech Stacks
+## Features
+* Frosted glass (acrylic) window with a custom title bar
+* Standard arithmetic: addition, subtraction, multiplication and division
+* Type full equations, with the equation shown in the display
+* Keyboard input
+
+## Tech Stack
 * **Language:** C#
-* **Framework:** .NET (Windows Forms)
+* **Framework:** .NET Framework 4.7.2 (Windows Forms)
 * **IDE:** Visual Studio
 
-## ✨ Getting Started
+## Download
 
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/lynx7843/Minimal-Cal.git
-    ```
-2.  Open the solution file (`Minimal Cal.sln`) in **Visual Studio**.
-3.  Press **Start** or `F5` to build and run the application.
+The latest `.exe` can be found in the [Releases](https://github.com/lynx7843/Minimal-Cal/releases) section.
 
-## 📝 License
-This project is open-source and available under the [MIT License](LICENSE).
+## Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/lynx7843/Minimal-Cal.git
+   ```
+2. Open `Minimal Cal.sln` in Visual Studio.
+3. Press `F5` to build and run.
+
+## Preview
+
+![Preview](img/preview.png)
