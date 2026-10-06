@@ -36,9 +36,22 @@ namespace Minimal_Cal
             textBox1.Height = displayHeight;
         }
 
+        // Dark tint with low opacity (alpha 110/255) laid over the blurred wallpaper
+        static readonly Color AcrylicTint = Color.FromArgb(110, 20, 20, 20);
+
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
 
+        protected override void OnHandleCreated(EventArgs e)
+        {
+            base.OnHandleCreated(e);
+
+            // WinForms can't paint an alpha BackColor on a top-level form, and opaque GDI
+            // pixels would hide the blur. Black is treated as see-through by the acrylic
+            // surface, so the tint comes from AcrylicTint via the accent policy instead.
+            BackColor = Color.Black;
+            AcrylicHelper.Enable(this, AcrylicTint);
         }
 
         // Keys that aren't characters (Enter, Backspace, Esc, Delete) arrive here,
