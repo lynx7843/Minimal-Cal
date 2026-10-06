@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.titleBar = new System.Windows.Forms.Panel();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.buttonMinimize = new Minimal_Cal.GlassButton();
+            this.buttonClose = new Minimal_Cal.GlassButton();
             this.labelMode = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -39,24 +43,92 @@
             this.button1 = new Minimal_Cal.GlassButton();
             this.button22 = new Minimal_Cal.GlassButton();
             this.button3 = new Minimal_Cal.GlassButton();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new Minimal_Cal.GlassButton();
+            this.button7 = new Minimal_Cal.GlassButton();
+            this.button6 = new Minimal_Cal.GlassButton();
             this.button5 = new Minimal_Cal.GlassButton();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.button12 = new Minimal_Cal.GlassButton();
+            this.button11 = new Minimal_Cal.GlassButton();
+            this.button10 = new Minimal_Cal.GlassButton();
             this.button9 = new Minimal_Cal.GlassButton();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.button16 = new Minimal_Cal.GlassButton();
+            this.button15 = new Minimal_Cal.GlassButton();
+            this.button14 = new Minimal_Cal.GlassButton();
             this.button13 = new Minimal_Cal.GlassButton();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
+            this.button24 = new Minimal_Cal.GlassButton();
+            this.button19 = new Minimal_Cal.GlassButton();
+            this.button18 = new Minimal_Cal.GlassButton();
             this.button17 = new Minimal_Cal.GlassButton();
+            this.titleBar.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // titleBar
+            // 
+            this.titleBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.titleBar.BackColor = System.Drawing.Color.Transparent;
+            this.titleBar.Controls.Add(this.labelTitle);
+            this.titleBar.Controls.Add(this.buttonMinimize);
+            this.titleBar.Controls.Add(this.buttonClose);
+            this.titleBar.Location = new System.Drawing.Point(0, 0);
+            this.titleBar.Name = "titleBar";
+            this.titleBar.Size = new System.Drawing.Size(400, 32);
+            this.titleBar.TabIndex = 3;
+            this.titleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.White;
+            this.labelTitle.Location = new System.Drawing.Point(0, 0);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.labelTitle.Size = new System.Drawing.Size(150, 32);
+            this.labelTitle.TabIndex = 0;
+            this.labelTitle.Text = "Calculator";
+            this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TitleBar_MouseDown);
+            // 
+            // buttonMinimize
+            // 
+            this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonMinimize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonMinimize.FlatAppearance.BorderSize = 0;
+            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimize.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMinimize.ForeColor = System.Drawing.Color.White;
+            this.buttonMinimize.HoverAlphaBoost = 40;
+            this.buttonMinimize.Location = new System.Drawing.Point(308, 0);
+            this.buttonMinimize.Name = "buttonMinimize";
+            this.buttonMinimize.PressedAlphaBoost = 80;
+            this.buttonMinimize.Size = new System.Drawing.Size(46, 32);
+            this.buttonMinimize.TabIndex = 1;
+            this.buttonMinimize.TabStop = false;
+            this.buttonMinimize.Text = "";
+            this.buttonMinimize.UseVisualStyleBackColor = false;
+            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.ForeColor = System.Drawing.Color.White;
+            this.buttonClose.HoverAlphaBoost = 200;
+            this.buttonClose.Location = new System.Drawing.Point(354, 0);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.PressedAlphaBoost = 140;
+            this.buttonClose.Size = new System.Drawing.Size(46, 32);
+            this.buttonClose.TabIndex = 2;
+            this.buttonClose.TabStop = false;
+            this.buttonClose.Text = "";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // labelMode
             // 
@@ -65,7 +137,7 @@
             this.labelMode.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMode.ForeColor = System.Drawing.Color.White;
-            this.labelMode.Location = new System.Drawing.Point(12, 6);
+            this.labelMode.Location = new System.Drawing.Point(12, 38);
             this.labelMode.Name = "labelMode";
             this.labelMode.Size = new System.Drawing.Size(93, 24);
             this.labelMode.TabIndex = 0;
@@ -78,7 +150,7 @@
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(12, 30);
+            this.textBox1.Location = new System.Drawing.Point(12, 62);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(376, 64);
             this.textBox1.TabIndex = 1;
@@ -119,7 +191,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button19, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.button18, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.button17, 3, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 130);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 162);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(1, 1, 0, 0);
             this.tableLayoutPanel1.RowCount = 6;
@@ -140,9 +212,11 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.HoverAlphaBoost = 40;
             this.button4.Location = new System.Drawing.Point(1, 1);
             this.button4.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button4.Name = "button4";
+            this.button4.PressedAlphaBoost = 80;
             this.button4.Size = new System.Drawing.Size(92, 68);
             this.button4.TabIndex = 0;
             this.button4.Text = "%";
@@ -157,9 +231,11 @@
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.HoverAlphaBoost = 40;
             this.button20.Location = new System.Drawing.Point(94, 1);
             this.button20.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button20.Name = "button20";
+            this.button20.PressedAlphaBoost = 80;
             this.button20.Size = new System.Drawing.Size(92, 68);
             this.button20.TabIndex = 1;
             this.button20.Text = "√";
@@ -174,9 +250,11 @@
             this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button23.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button23.ForeColor = System.Drawing.Color.White;
+            this.button23.HoverAlphaBoost = 40;
             this.button23.Location = new System.Drawing.Point(187, 1);
             this.button23.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button23.Name = "button23";
+            this.button23.PressedAlphaBoost = 80;
             this.button23.Size = new System.Drawing.Size(92, 68);
             this.button23.TabIndex = 2;
             this.button23.Text = "x²";
@@ -191,9 +269,11 @@
             this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button25.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button25.ForeColor = System.Drawing.Color.White;
+            this.button25.HoverAlphaBoost = 40;
             this.button25.Location = new System.Drawing.Point(280, 1);
             this.button25.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button25.Name = "button25";
+            this.button25.PressedAlphaBoost = 80;
             this.button25.Size = new System.Drawing.Size(95, 68);
             this.button25.TabIndex = 3;
             this.button25.Text = "1/x";
@@ -208,9 +288,11 @@
             this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button21.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button21.ForeColor = System.Drawing.Color.White;
+            this.button21.HoverAlphaBoost = 40;
             this.button21.Location = new System.Drawing.Point(1, 70);
             this.button21.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button21.Name = "button21";
+            this.button21.PressedAlphaBoost = 80;
             this.button21.Size = new System.Drawing.Size(92, 68);
             this.button21.TabIndex = 4;
             this.button21.Text = "CE";
@@ -225,9 +307,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.HoverAlphaBoost = 40;
             this.button1.Location = new System.Drawing.Point(94, 70);
             this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button1.Name = "button1";
+            this.button1.PressedAlphaBoost = 80;
             this.button1.Size = new System.Drawing.Size(92, 68);
             this.button1.TabIndex = 5;
             this.button1.Text = "C";
@@ -242,9 +326,11 @@
             this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button22.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button22.ForeColor = System.Drawing.Color.White;
+            this.button22.HoverAlphaBoost = 40;
             this.button22.Location = new System.Drawing.Point(187, 70);
             this.button22.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button22.Name = "button22";
+            this.button22.PressedAlphaBoost = 80;
             this.button22.Size = new System.Drawing.Size(92, 68);
             this.button22.TabIndex = 6;
             this.button22.Text = "⌫";
@@ -259,9 +345,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.HoverAlphaBoost = 40;
             this.button3.Location = new System.Drawing.Point(280, 70);
             this.button3.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button3.Name = "button3";
+            this.button3.PressedAlphaBoost = 80;
             this.button3.Size = new System.Drawing.Size(95, 68);
             this.button3.TabIndex = 7;
             this.button3.Text = "÷";
@@ -270,17 +358,17 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.HoverAlphaBoost = 40;
             this.button8.Location = new System.Drawing.Point(1, 139);
             this.button8.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button8.Name = "button8";
+            this.button8.PressedAlphaBoost = 80;
             this.button8.Size = new System.Drawing.Size(92, 68);
             this.button8.TabIndex = 8;
             this.button8.Text = "7";
@@ -289,17 +377,17 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.HoverAlphaBoost = 40;
             this.button7.Location = new System.Drawing.Point(94, 139);
             this.button7.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button7.Name = "button7";
+            this.button7.PressedAlphaBoost = 80;
             this.button7.Size = new System.Drawing.Size(92, 68);
             this.button7.TabIndex = 9;
             this.button7.Text = "8";
@@ -308,17 +396,17 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.HoverAlphaBoost = 40;
             this.button6.Location = new System.Drawing.Point(187, 139);
             this.button6.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button6.Name = "button6";
+            this.button6.PressedAlphaBoost = 80;
             this.button6.Size = new System.Drawing.Size(92, 68);
             this.button6.TabIndex = 10;
             this.button6.Text = "9";
@@ -333,9 +421,11 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.HoverAlphaBoost = 40;
             this.button5.Location = new System.Drawing.Point(280, 139);
             this.button5.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button5.Name = "button5";
+            this.button5.PressedAlphaBoost = 80;
             this.button5.Size = new System.Drawing.Size(95, 68);
             this.button5.TabIndex = 11;
             this.button5.Text = "×";
@@ -344,17 +434,17 @@
             // 
             // button12
             // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.HoverAlphaBoost = 40;
             this.button12.Location = new System.Drawing.Point(1, 208);
             this.button12.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button12.Name = "button12";
+            this.button12.PressedAlphaBoost = 80;
             this.button12.Size = new System.Drawing.Size(92, 68);
             this.button12.TabIndex = 12;
             this.button12.Text = "4";
@@ -363,17 +453,17 @@
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.HoverAlphaBoost = 40;
             this.button11.Location = new System.Drawing.Point(94, 208);
             this.button11.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button11.Name = "button11";
+            this.button11.PressedAlphaBoost = 80;
             this.button11.Size = new System.Drawing.Size(92, 68);
             this.button11.TabIndex = 13;
             this.button11.Text = "5";
@@ -382,17 +472,17 @@
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.HoverAlphaBoost = 40;
             this.button10.Location = new System.Drawing.Point(187, 208);
             this.button10.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button10.Name = "button10";
+            this.button10.PressedAlphaBoost = 80;
             this.button10.Size = new System.Drawing.Size(92, 68);
             this.button10.TabIndex = 14;
             this.button10.Text = "6";
@@ -407,9 +497,11 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.HoverAlphaBoost = 40;
             this.button9.Location = new System.Drawing.Point(280, 208);
             this.button9.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button9.Name = "button9";
+            this.button9.PressedAlphaBoost = 80;
             this.button9.Size = new System.Drawing.Size(95, 68);
             this.button9.TabIndex = 15;
             this.button9.Text = "−";
@@ -418,17 +510,17 @@
             // 
             // button16
             // 
-            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.HoverAlphaBoost = 40;
             this.button16.Location = new System.Drawing.Point(1, 277);
             this.button16.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button16.Name = "button16";
+            this.button16.PressedAlphaBoost = 80;
             this.button16.Size = new System.Drawing.Size(92, 68);
             this.button16.TabIndex = 16;
             this.button16.Text = "1";
@@ -437,17 +529,17 @@
             // 
             // button15
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.HoverAlphaBoost = 40;
             this.button15.Location = new System.Drawing.Point(94, 277);
             this.button15.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button15.Name = "button15";
+            this.button15.PressedAlphaBoost = 80;
             this.button15.Size = new System.Drawing.Size(92, 68);
             this.button15.TabIndex = 17;
             this.button15.Text = "2";
@@ -456,17 +548,17 @@
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.HoverAlphaBoost = 40;
             this.button14.Location = new System.Drawing.Point(187, 277);
             this.button14.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button14.Name = "button14";
+            this.button14.PressedAlphaBoost = 80;
             this.button14.Size = new System.Drawing.Size(92, 68);
             this.button14.TabIndex = 18;
             this.button14.Text = "3";
@@ -481,9 +573,11 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.HoverAlphaBoost = 40;
             this.button13.Location = new System.Drawing.Point(280, 277);
             this.button13.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button13.Name = "button13";
+            this.button13.PressedAlphaBoost = 80;
             this.button13.Size = new System.Drawing.Size(95, 68);
             this.button13.TabIndex = 19;
             this.button13.Text = "+";
@@ -492,17 +586,17 @@
             // 
             // button24
             // 
-            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button24.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button24.ForeColor = System.Drawing.Color.White;
+            this.button24.HoverAlphaBoost = 40;
             this.button24.Location = new System.Drawing.Point(1, 346);
             this.button24.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button24.Name = "button24";
+            this.button24.PressedAlphaBoost = 80;
             this.button24.Size = new System.Drawing.Size(92, 71);
             this.button24.TabIndex = 20;
             this.button24.Text = "±";
@@ -511,17 +605,17 @@
             // 
             // button19
             // 
-            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.HoverAlphaBoost = 40;
             this.button19.Location = new System.Drawing.Point(94, 346);
             this.button19.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button19.Name = "button19";
+            this.button19.PressedAlphaBoost = 80;
             this.button19.Size = new System.Drawing.Size(92, 71);
             this.button19.TabIndex = 21;
             this.button19.Text = "0";
@@ -530,17 +624,17 @@
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.HoverAlphaBoost = 40;
             this.button18.Location = new System.Drawing.Point(187, 346);
             this.button18.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button18.Name = "button18";
+            this.button18.PressedAlphaBoost = 80;
             this.button18.Size = new System.Drawing.Size(92, 71);
             this.button18.TabIndex = 22;
             this.button18.Text = ".";
@@ -555,9 +649,11 @@
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
+            this.button17.HoverAlphaBoost = 40;
             this.button17.Location = new System.Drawing.Point(280, 346);
             this.button17.Margin = new System.Windows.Forms.Padding(0, 0, 1, 1);
             this.button17.Name = "button17";
+            this.button17.PressedAlphaBoost = 80;
             this.button17.Size = new System.Drawing.Size(95, 71);
             this.button17.TabIndex = 23;
             this.button17.Text = "=";
@@ -569,20 +665,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(400, 560);
+            this.ClientSize = new System.Drawing.Size(400, 592);
+            this.Controls.Add(this.titleBar);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelMode);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(12, 6, 12, 0);
+            this.Padding = new System.Windows.Forms.Padding(12, 38, 12, 0);
             this.Text = "Minimal Cal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
+            this.titleBar.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -591,6 +689,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel titleBar;
+        private System.Windows.Forms.Label labelTitle;
+        private Minimal_Cal.GlassButton buttonMinimize;
+        private Minimal_Cal.GlassButton buttonClose;
         private System.Windows.Forms.Label labelMode;
         private System.Windows.Forms.Label textBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -598,25 +700,25 @@
         private Minimal_Cal.GlassButton button3;
         private Minimal_Cal.GlassButton button4;
         private Minimal_Cal.GlassButton button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private Minimal_Cal.GlassButton button6;
+        private Minimal_Cal.GlassButton button7;
+        private Minimal_Cal.GlassButton button8;
         private Minimal_Cal.GlassButton button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private Minimal_Cal.GlassButton button10;
+        private Minimal_Cal.GlassButton button11;
+        private Minimal_Cal.GlassButton button12;
         private Minimal_Cal.GlassButton button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private Minimal_Cal.GlassButton button14;
+        private Minimal_Cal.GlassButton button15;
+        private Minimal_Cal.GlassButton button16;
         private Minimal_Cal.GlassButton button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private Minimal_Cal.GlassButton button18;
+        private Minimal_Cal.GlassButton button19;
         private Minimal_Cal.GlassButton button20;
         private Minimal_Cal.GlassButton button21;
         private Minimal_Cal.GlassButton button22;
         private Minimal_Cal.GlassButton button23;
-        private System.Windows.Forms.Button button24;
+        private Minimal_Cal.GlassButton button24;
         private Minimal_Cal.GlassButton button25;
     }
 }
