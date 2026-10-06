@@ -27,13 +27,6 @@ namespace Minimal_Cal
         public Form1()
         {
             InitializeComponent();
-
-            // Keep the display height fixed when the font shrinks for long equations.
-            // Read the height while AutoSize is still on: that's the height the 36pt
-            // font needs at the current Windows display scaling.
-            int displayHeight = textBox1.Height;
-            textBox1.AutoSize = false;
-            textBox1.Height = displayHeight;
         }
 
         // Dark tint with low opacity (alpha 110/255) laid over the blurred wallpaper
@@ -447,16 +440,5 @@ namespace Minimal_Cal
         }
 
         #endregion
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            // Hand focus back to the form so no text cursor shows in the display
-            this.ActiveControl = null;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
