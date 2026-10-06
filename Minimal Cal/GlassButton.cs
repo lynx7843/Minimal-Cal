@@ -6,13 +6,13 @@ namespace Minimal_Cal
 {
     // Flat, borderless button whose BackColor may carry an alpha value.
     // A stock Button paints its back colour opaquely and smears when alpha is stacked on
-    // repaint, so this one resets its area to the form's see-through black and then lays the
-    // translucent fill on top, every time.
+    // repaint, so this one resets its area to transparent and then lays the translucent fill
+    // on top, every time.
     class GlassButton : Button
     {
         // Extra alpha added while hovered / pressed so the buttons still give feedback
-        const int HoverAlphaBoost = 40;
-        const int PressedAlphaBoost = 80;
+        public int HoverAlphaBoost { get; set; } = 40;
+        public int PressedAlphaBoost { get; set; } = 80;
 
         bool hovered;
         bool pressed;
@@ -47,9 +47,9 @@ namespace Minimal_Cal
             int boost = pressed ? PressedAlphaBoost : hovered ? HoverAlphaBoost : 0;
             Color fill = Color.FromArgb(Math.Min(255, BackColor.A + boost), BackColor);
 
-            // Black is see-through on the acrylic surface, so clearing to it gives every repaint the
-            // same clean backdrop and the alpha fill never stacks on its previous frame
-            e.Graphics.Clear(Color.Black);
+            // Reset to fully transparent so every repaint starts from the same clean backdrop
+            // and the alpha fill never stacks on its previous frame
+            e.Graphics.Clear(Color.Transparent);
 
             using (SolidBrush brush = new SolidBrush(fill))
             {
