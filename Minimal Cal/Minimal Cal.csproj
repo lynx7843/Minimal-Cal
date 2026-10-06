@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="AcrylicHelper.cs" />
     <Compile Include="ExpressionEvaluator.cs" />
+    <Compile Include="GlassButton.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
